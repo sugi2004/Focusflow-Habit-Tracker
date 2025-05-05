@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FocusFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="screen" id="splash">
+    <h1>✔️ FocusFlow</h1>
+    <button onclick="goTo('onboarding')">Get Started</button>
+  </div>
+
+  <div class="screen hidden" id="onboarding">
+    <h2>What are your goals?</h2>
+    <ul>
+      <li>✔️ Get organized</li>
+      <li>✔️ Stay motivated</li>
+      <li>✔️ Track your progress</li>
+    </ul>
+    <button onclick="goTo('dashboard')">Continue</button>
+  </div>
+
+  <div class="screen hidden" id="dashboard">
+    <h2>Hello, User</h2>
+    <div class="streak">🔥 3-day streak</div>
+    <h3>Daily Habits</h3>
+    <ul class="habit-list">
+      <li><input type="checkbox" checked> Drink water</li>
+      <li><input type="checkbox"> Exercise</li>
+      <li><input type="checkbox"> Read</li>
+      <li><input type="checkbox"> Meditate</li>
+    </ul>
+    <button onclick="goTo('newHabit')" class="fab">＋</button>
+  </div>
+
+  <div class="screen hidden" id="newHabit">
+    <h2>New Habit</h2>
+    <label>Name</label>
+    <input type="text" placeholder="Habit name">
+    <label>Icon</label>
+    <select>
+      <option>💧</option>
+      <option>📚</option>
+      <option>🏋️‍♂️</option>
+    </select>
+    <label>Time</label>
+    <input type="time">
+    <button onclick="goTo('dashboard')">Add</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
